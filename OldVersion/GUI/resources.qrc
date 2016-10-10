@@ -1,0 +1,34 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>img/inGameBg.png</file>
+        <file>img/menuBg.png</file>
+        <file>img/wizardPoker.png</file>
+        <file>img/wizardPokerLogo.png</file>
+        <file>img/cardFront.jpg</file>
+        <file>img/minion.png</file>
+        <file>img/vs_logo.png</file>
+        <file>img/yasin.jpg</file>
+        <file>img/jacky.jpg</file>
+        <file>img/youcef.png</file>
+        <file>img/keno.jpg</file>
+        <file>img/jacopo.jpg</file>
+        <file>img/francois.jpg</file>
+        <file>img/ad1.jpg</file>
+        <file>img/ad2.jpg</file>
+        <file>img/ad3.jpg</file>
+        <file>img/ad4.png</file>
+        <file>img/ad5.png</file>
+        <file>img/ad6.png</file>
+        <file>img/miguel.jpg</file>
+        <file>img/roggeman.jpg</file>
+        <file>img/boris.jpg</file>
+        <file>img/cedric.jpg</file>
+        <file>img/abdel.jpg</file>
+        <file>img/cheater.jpg</file>
+        <file>img/ad7.jpg</file>
+        <file>img/sacha.jpg</file>
+    </qresource>
+    <qresource prefix="/style">
+        <file>style/style.css</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CollectionGUI</class>
+ <widget class="QDialog" name="CollectionGUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>902</width>
+    <height>452</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Voir collection</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>img/wizardPokerLogo.png</normaloff>img/wizardPokerLogo.png</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="first">
+      <attribute name="title">
+       <string>Tab 1</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QHBoxLayout" name="upF"/>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="downF"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="second">
+      <attribute name="title">
+       <string>Tab 2</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <layout class="QHBoxLayout" name="upS"/>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="downS"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="third">
+      <attribute name="title">
+       <string>Tab 3</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <layout class="QHBoxLayout" name="upT"/>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="downT"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="fourth">
+      <attribute name="title">
+       <string>Tab 4</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <layout class="QHBoxLayout" name="upFo"/>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="downFo"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_5">
+      <attribute name="title">
+       <string>Tab 5</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <layout class="QHBoxLayout" name="upFi"/>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="downFi"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_6">
+      <attribute name="title">
+       <string>Tab 6</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <layout class="QHBoxLayout" name="upSix"/>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="downSix"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_7">
+      <attribute name="title">
+       <string>Tab 7</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_8">
+       <item>
+        <layout class="QHBoxLayout" name="downSeven"/>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="upSeven"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_8">
+      <attribute name="title">
+       <string>Tab 8</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_9">
+       <item>
+        <layout class="QHBoxLayout" name="upE"/>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="downE"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_9">
+      <attribute name="title">
+       <string>Tab 9</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_10">
+       <item>
+        <layout class="QHBoxLayout" name="upN"/>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="downN"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_10">
+      <attribute name="title">
+       <string>Tab 10</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_11">
+       <item>
+        <layout class="QHBoxLayout" name="upTen"/>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="downTen"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item alignment="Qt::AlignRight">
+    <widget class="QPushButton" name="Retour">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>100</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="text">
+      <string>Retour</string>
+     </property>
+     <property name="autoDefault">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

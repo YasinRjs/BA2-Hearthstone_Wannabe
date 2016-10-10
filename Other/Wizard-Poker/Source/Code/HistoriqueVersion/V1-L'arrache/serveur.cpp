@@ -1,0 +1,124 @@
+// strcmp renvoie 0 si les deux sont égales. 1 s'ils sont différents.
+// Variable DataBase , class Database
+#include <iostream>
+#include <netinet/in.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <errno.h>
+#include <string.h>
+#include <netdb.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <sys/wait.h>
+#include <signal.h>
+
+#define MAXDATASIZE 200
+#define PORT 5555
+#define BACKLOG 10
+
+#include "Database.cpp"
+
+using namespace std;
+
+void sigchld_handler(int s){
+  while(wait(NULL) > 0);
+}
+
+int main(int argc, char *argv[]) {
+  int sockfd, new_fd;
+  int numbytes;
+  char msgClient[MAXDATASIZE];
+  struct sockaddr_in my_addr;
+  struct sockaddr_in their_addr;
+  socklen_t sin_size;
+  struct sigaction sa;
+  int yes = 1;
+//-----------------------------------------------Inititialisation 
+  if ((sockfd = socket(AF_INET,SOCK_STREAM,0)) == -1){
+    perror("socket");
+    exit(1);
+  }
+  if (setsockopt(sockfd,SOL_SOCKET,SO_REUSEADDR,&yes,sizeof(int)) == -1) {
+    perror("setsockopt");
+    exit(1);
+  }    
+  my_addr.sin_family = AF_INET;
+  my_addr.sin_port = htons(PORT);
+  my_addr.sin_addr.s_addr = INADDR_ANY;
+  memset(&(my_addr.sin_zero),'\0',8);
+  if (bind(sockfd, (struct sockaddr *)&my_addr, sizeof(struct sockaddr)) == -1){
+    perror("bind");
+    exit(1);
+  }
+  if (listen(sockfd,BACKLOG) == -1) {
+    perror("listen");
+    exit(1);
+  }
+  sa.sa_handler = sigchld_handler;
+  sigemptyset(&sa.sa_mask);
+  sa.sa_flags = SA_RESTART;
+  if (sigaction(SIGCHLD,&sa,NULL) == -1) {
+    perror("sigaction");
+    exit(1);
+  }  
+//-----------------------------------------------Inititialisation 
+
+  Database DataBase = Database();
+  
+  while(1){
+    sin_size = sizeof(struct sockaddr_in);
+    if ((new_fd = accept(sockfd,(struct sockaddr *)&their_addr, &sin_size)) == -1){
+      perror("accept");
+      exit(1);
+    }
+    cout << "Connection from : " << inet_ntoa(their_addr.sin_addr) << endl;
+    if (!fork()){
+      close(sockfd);
+      //Reception de la réponse "se connecter"
+      if ((numbytes=recv(new_fd,msgClient,MAXDATASIZE-1,0)) == -1) {
+        perror("recv");
+        exit(1);
+      }
+      msgClient[numbytes] = '\0';
+      
+      if (strcmp(msgClient,"1")){
+        numbytes=recv(new_fd,msgClient,MAXDATASIZE-1,0);
+        msgClient[numbytes] = '\0';
+
+        if (DataBase.hasUserNamed(msgClient)){
+          int indiceUser = DataBase.getID(msgClient);
+          send(new_fd,"OK",MAXDATASIZE-1,0);
+          numbytes=recv(new_fd,msgClient,MAXDATASIZE-1,0);
+          msgClient[numbytes] = '\0';
+          if (DataBase.isCorrectPassword(indiceUser,msgClient)){
+            send(new_fd,"OK",MAXDATASIZE-1,0);
+          }
+          else{
+            send(new_fd,"NO password",MAXDATASIZE-1,0);
+          }
+        }
+        else{
+          send(new_fd,"NO username",MAXDATASIZE-1,0);
+        }
+      }
+      else{
+        //TODO
+        //inscription();
+      }
+      
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+      exit(0);
+    }
+  close(new_fd);
+  }
+  return 0;
+}

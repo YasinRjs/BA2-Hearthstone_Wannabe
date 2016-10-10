@@ -1,0 +1,20 @@
+-- Pour executer l'interface --
+
+    !S'assurer d'avoir qt4 ou qt5 installé!
+
+    1. Aller dans GUI.
+    2. Aller dans Server.
+    3. lancer make.
+    4. lancer ./server sur un terminal.
+    5. Retourner dans GUI
+    6. lancer make.
+    7. lancer ./GUI
+
+-- Pour executer sur terminal.
+
+    !Retourner dans le dossier terminal!
+
+    1. lancer make.
+    2. lancer ./server sur un terminal.
+    3. lancer ./client "AdresseIP" sur un autre.
+

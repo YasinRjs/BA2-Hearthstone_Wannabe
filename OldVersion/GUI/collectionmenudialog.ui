@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CollectionMenuDialog</class>
+ <widget class="QDialog" name="CollectionMenuDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>652</width>
+    <height>589</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Collection</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>img/wizardPokerLogo.png</normaloff>img/wizardPokerLogo.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>10</y>
+     <width>641</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: transparent</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:600; text-decoration: underline; color:#ff0000;&quot;&gt;Collection&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="viewCollectionButton">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>80</y>
+     <width>381</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: rgb(173, 173, 173)</string>
+   </property>
+   <property name="text">
+    <string>Voir sa collection</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="viewDecksButton">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>140</y>
+     <width>381</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: rgb(173, 173, 173)</string>
+   </property>
+   <property name="text">
+    <string>Voir ses decks</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="viewCardButton">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>200</y>
+     <width>381</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: rgb(173, 173, 173)</string>
+   </property>
+   <property name="text">
+    <string>Voir une carte</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="createDeckButton">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>260</y>
+     <width>381</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: rgb(173, 173, 173)</string>
+   </property>
+   <property name="text">
+    <string>Créer un deck</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="deleteDeckButton">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>320</y>
+     <width>381</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: rgb(173, 173, 173)</string>
+   </property>
+   <property name="text">
+    <string>Supprimer un deck</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="modifyDeckButton">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>380</y>
+     <width>381</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: rgb(173, 173, 173)</string>
+   </property>
+   <property name="text">
+    <string>Modifier un deck</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="mainMenuButton">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>440</y>
+     <width>381</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: rgb(173, 173, 173)</string>
+   </property>
+   <property name="text">
+    <string>Menu principal</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pub">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>500</y>
+     <width>594</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777213</width>
+     <height>70</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:transparent</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

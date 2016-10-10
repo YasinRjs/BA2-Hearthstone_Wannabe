@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>126</x>
+      <y>161</y>
+      <w>161</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>*BattleManager*
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>378</x>
+      <y>133</y>
+      <w>189</w>
+      <h>147</h>
+    </coordinates>
+    <panel_attributes>*Game*
+--
+- id: int
+- player1 : Player
+- player2 : Player
+--
++ initGame()
++ endGame()
++ gameLoop()
++ nextTurn()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>378</x>
+      <y>315</y>
+      <w>224</w>
+      <h>259</h>
+    </coordinates>
+    <panel_attributes>*Player*
+--
+- account: Account
+- name: String
+- hand: Card[]
+- deck: GameDeck
+- healthPoints : int
+- opponent: Player
+- energy: int
+- minions: Minion[]
+- graveyard: Minion[]
+--
++ receiveDamage(int damage)
++ win()
++ loose()
++ startNewturn()   #Draw+gainEnergy
++ drawCard()
++ gainEnergy()
++ useCard(Card)
++ putInGraveyard(Minion)
++ summon(Minion)
++ endTurn()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>434</x>
+      <y>602</y>
+      <w>133</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>*Card*
+--
+- type: CardType
+--
++ initCard(owner:Player)
++ discard()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>448</x>
+      <y>700</y>
+      <w>98</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*CardIdentity*
+--
+- name: String
+- text: String
+- energyCost: int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>210</x>
+      <y>700</y>
+      <w>175</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>*Spell*
+--
+- who: int #Ally-Ennemy-Both ALLOWED
+- effect: String
+- subType: int
+--
+- doEffect(Character)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>686</x>
+      <y>448</y>
+      <w>140</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>*Deck*
+--
+- contentDeck: Card[]
+--
++ ModifyDeck()
++ RemoveDeck()
++ CopyDeck()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>679</x>
+      <y>287</y>
+      <w>175</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>*GameDeck*
+--
+- deckSize: int
+- contentDeck: Deck (Queue deck)
+--
++ giveFirstCard()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>588</x>
+      <y>315</y>
+      <w>105</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=1</panel_attributes>
+    <additional_attributes>14.0;10.0;134.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>749</x>
+      <y>357</y>
+      <w>70</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+constructed
+with</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>308</x>
+      <y>308</y>
+      <w>84</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>308</x>
+      <y>315</y>
+      <w>21</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>308</x>
+      <y>364</y>
+      <w>84</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+Opponent</panel_attributes>
+    <additional_attributes>100.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>483</y>
+      <w>140</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=20</panel_attributes>
+    <additional_attributes>176.0;12.0;130.0;10.0;130.0;190.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>651</y>
+      <w>21</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>308</x>
+      <y>623</y>
+      <w>140</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>180.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>336</x>
+      <y>623</y>
+      <w>112</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+layer=0</panel_attributes>
+    <additional_attributes>140.0;10.0;10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>903</x>
+      <y>462</y>
+      <w>147</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>*Account*
+--
+- mail : String
+- password : String
+- friends : FriendList
+- deckList : Deck[ ]
+- activeDeck : Deck
+- victory : int
+- defeat : int
+- cardCollection : Collection
+--
++ ModifyProfil()
++ ModifyDecks()
++ AccesCollection()
++ CheckProfil()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>819</x>
+      <y>462</y>
+      <w>98</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=1..10</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>476</x>
+      <y>273</y>
+      <w>28</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=2</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1099</x>
+      <y>413</y>
+      <w>147</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>*Ranking*
+--
+serverRanking: Account[]
+--
+UpdateRanking()
+SearchPlayer(Account)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1043</x>
+      <y>434</y>
+      <w>70</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=0..*</panel_attributes>
+    <additional_attributes>10.0;70.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1043</x>
+      <y>546</y>
+      <w>77</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=0..*
+m1=1</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1106</x>
+      <y>553</y>
+      <w>147</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>*FriendList*
+--
+numberFriends: int
+playersFriends: Account[]
+--
+addNewFriend()
+removeFriend()
+showOnlinePlayer()
+chatWithPlayer(Account)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1120</x>
+      <y>693</y>
+      <w>147</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>*Chat*
+--
+showChatHistory()
+sendMessage(Account)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1183</x>
+      <y>651</y>
+      <w>21</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>679</x>
+      <y>147</y>
+      <w>147</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>*Matchmaking*
+--
++ findAnOpponent()
++ opponentFound()
++ CreatePlayer()
++ shuffleDecks() -&gt; GameDeck
++ launchTheGame()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>819</x>
+      <y>203</y>
+      <w>196</w>
+      <h>273</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;260.0;10.0;260.0;370.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>161</y>
+      <w>133</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>896</x>
+      <y>686</y>
+      <w>147</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>*Collection*
+--
+- totalCards: int
+- availableCards: int[]
+--
++ showMoreThanTwo()
++ tributeCardsToGetNew()
++ addCardInCollection()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>931</x>
+      <y>637</y>
+      <w>21</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>154</x>
+      <y>602</y>
+      <w>161</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>*Character*
+&lt;&lt;Abstract&gt;&gt;
+--
++ receiveDamage(int damage)
+&lt;&lt; pure abstract methode &gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>154</x>
+      <y>483</y>
+      <w>168</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*Minion*
+--
+- hp : int
+- atk : int
+--
++ DoAttack()
++ receiveDamage(int damage)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>651</x>
+      <y>686</y>
+      <w>147</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>*Database*
+--
+- totalCards : int
+- allCards : Cards[ ]
+--
++ parseCardsFromTxt()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>791</x>
+      <y>707</y>
+      <w>119</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>Collection a accès
+à la database</panel_attributes>
+    <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>308</x>
+      <y>532</y>
+      <w>84</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>259</x>
+      <y>546</y>
+      <w>21</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+</diagram>

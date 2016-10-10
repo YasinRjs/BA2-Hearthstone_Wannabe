@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DeckToModify</class>
+ <widget class="QDialog" name="DeckToModify">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1235</width>
+    <height>763</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/img/img/menuBg.png);</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>60</y>
+     <width>1221</width>
+     <height>631</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>3</number>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>Deck 1</string>
+    </attribute>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="up1"/>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="mid1"/>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="down1"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Deck 2</string>
+    </attribute>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <layout class="QHBoxLayout" name="up2"/>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="down2"/>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="mid2"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="tab_3">
+    <attribute name="title">
+     <string>Deck 3</string>
+    </attribute>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <layout class="QHBoxLayout" name="up3"/>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="down3"/>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="mid3"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="tab_4">
+    <attribute name="title">
+     <string>Deck 4</string>
+    </attribute>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <layout class="QHBoxLayout" name="up4"/>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="down4"/>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="mid4"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="tab_5">
+    <attribute name="title">
+     <string>Deck 5</string>
+    </attribute>
+    <layout class="QVBoxLayout" name="verticalLayout_5">
+     <item>
+      <layout class="QHBoxLayout" name="up5"/>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="down5"/>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="mid5"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QLineEdit" name="chosenDeck">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>710</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="lancerButton">
+   <property name="geometry">
+    <rect>
+     <x>880</x>
+     <y>710</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: rgb(173, 173, 173)</string>
+   </property>
+   <property name="text">
+    <string>Modifier</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="lancerButton_2">
+   <property name="geometry">
+    <rect>
+     <x>1070</x>
+     <y>710</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: rgb(173, 173, 173)</string>
+   </property>
+   <property name="text">
+    <string>Menu principal</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

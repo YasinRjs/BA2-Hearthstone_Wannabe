@@ -1,0 +1,2 @@
+Binary distribution files will go here.
+i.e: The client linux executable

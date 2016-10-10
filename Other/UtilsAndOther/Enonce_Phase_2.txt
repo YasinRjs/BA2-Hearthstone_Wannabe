@@ -1,0 +1,10 @@
+Pour cette deuxième phase, nous vous demandons (au minimum) d’implanter pour une interface console les fonctionnalités suivantes :
+
+-Gestion d'une collection de cartes,
+-La création d’une partie avec un adversaire,
+-La gestion de la partie avec l'affichage d'un tableau de jeu,
+-Le déroulement d’une partie,
+-Gestion des discussions et classements entre joueurs.
+
+
+Nous vous demandons également de mettre à jour votre SRD en fonction des changements que vous apportez à votre projet et en fonction du retour des assistants pour le SRD de la phase 1.

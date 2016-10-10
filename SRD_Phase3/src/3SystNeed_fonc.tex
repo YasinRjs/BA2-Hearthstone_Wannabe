@@ -1,0 +1,16 @@
+\chapter{Besoins du système}
+\section{Exigences fonctionnelles}
+\subsection{Inscription\index{inscription}}
+{L'utilisateur\index{utilisateur}, désireux de jouer, devra passer par un système d'inscription auprès du serveur. Il devra donner un nom d'utilisateur unique ainsi qu'un mot de passe quelconque. Si le nom d'utilisateur est déjà utilisé sur la database, le serveur \index{serveur}va avertir l'utilisateur et lui redemander un nouveau nom d'utilisateur. Une fois l'inscription réussi, le serveur va mettre à jour la database et l'utilisateur pourra se connecter.}
+\subsection{Connexion\index{connexion}}
+{L'utilisateur\index{utilisateur} se connecte grâce à son nom d'utilisateur et son mot de passe. La tentative de connection passe par le serveur. Si l'utilisateur est déjà connecté, il sera averti. La connection échoue si le nom d'utilisateur n'existe pas dans la database ou si le mot de passe ne correspond pas au nom d'utilisateur donné.}
+\subsection{Classement\index{classement}}
+{L'utilisateur, une fois connecté, pourra consulté le classement qui recense tout les comptes \index{compte}inscrit sur le serveur\index{serveur}. À chaque compte est associé un nombre de victoires et un nombre de défaites. Le classement détermine le niveau d'un joueur par rapport aux autres en fonction de la différence entre le nombre de victoires et de défaites. L'utilisateur peut consulter le classement depuis le menu principal.}
+\subsection{Créer un deck\index{deck}}
+{L'utilisateur\index{utilisateur} choisit ses cartes pour composer un nouveau deck. Ces cartes doivent exister dans la collection \index{collection} de l'utilisateur. Le deck devra également respecter les contraintes d'un deck. On ne peut avoir plus de 2 fois la même carte et le deck comporte exactement 20 cartes.}
+\subsection{Matchmaking\index{matchmaking}}
+{Le matchmaking se charge d'établir une connection entre 2 utilisateurs\index{utilisateur}. Une fois que 2 utilisateurs lance le matchmaking, ils deviennent adversaires sur le même duel\index{duel}. Chaque joueur reçoit comme information sur son advesaire\index{adversaire}, son nom d'utilisateur et leur nombre de victoires et défaites.}
+\subsection{Jouer un tour}
+{L'utilisateur peut choisir une action \index{action} dans son menu. Il peut jouer une carte, attaquer avec une créature sur le terrain, discuter\index{chat} avec un autre utilisateur, terminer son tour ou abandonner le duel\index{duel}.}
+\subsection{Abandonner}
+{Tout le monde s'est déjà rendu dans une situation où la victoire n'est plus du tout envisageable. Afin de gagner du temps, l'utilisateur\index{utilisateur} a la possibilité d'abandonner. Le duel\index{duel} prendra alors fin, l'adversaire sera déclaré gagnant.}

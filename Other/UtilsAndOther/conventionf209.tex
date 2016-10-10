@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\title{Convention Projet Wizard Poker}
+\author{Groupe 6}
+\date{}
+\begin{document}
+\maketitle
+\section{Intro}
+Ce document a pour but de centraliser les conventions pour le projet afin d'éviter d'éventuelle erreur et de conserver une homogénéité à travers tout le code. N'hésitez pas à rajouter des conventions mais prévenez sur le groupe si vous le faite.
+\section{Code review}
+On va utiliser du code review tout au long du projet. Un tableau est disponible sur le wiki du projet. Chaque menbre du groupe fesant une nouvelle partie doit impérativement la noter dans ce tableau et au minimun deux personnes doivent relire le code et le noter dans le tableau.
+\section{Convention code}
+\begin{itemize}
+\item Pour un \emph{if}, toujours mettre l'expression après la condition à la ligne.
+\item Pour les acolades, la première à un espace d'intervalle de l'expression sur la même ligne. La deuxième sur une nouvelle ligne après le corps du blocx
+\item Pour l'indentation, c'est un tab de 4 espaces
+\item Pour les méthodes, la déclaration se fait dans la classe correspondante dans le fichier .h et la définition se fait hors de la classe dans le fichier .cpp.
+\item Pour le nom de tous les objets, on utilise la convention notée dans les slides du cours d'analyse et méthode.
+\item Pour les opérateurs, on marque un espace avant ET après l'opérateur.
+\item Pour les namespaces avec les bibliothèques, le seul autoriser est avec std.
+\item Pour les virgules, dans n'importe quelle circonstance, pas d'espace avant et un espace après la virgule.
+\item Pour les commentaires, si besoin de docstring pour les méthodes, on utilise /* et */. Pour les commentaires généraux, avec // et à la ligne pour un commentaire sur un bloc. Si c'est pour une expression, sur la même ligne un tab après la fin de l'expression.
+\item Pour les déclarations, une et une seul par ligne
+\item Pour la longueur des lignes, essayer au mieux de respecter 72 caractères par ligne, sinon passer à la ligne.
+\item ......further conventions....
+
+\section{Test}
+Cette partie est encore à discuter et à compléter. On essayera de mettre des tests dans le code dès le début.
+
+\end{itemize}
+\end{document}

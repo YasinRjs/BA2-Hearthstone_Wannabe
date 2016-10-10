@@ -1,0 +1,67 @@
+\chapter{Introduction}
+\section{But du projet}
+
+\noindent Ce document a pour but de présenter, dans le cadre d'une deuxième année de Bachelier en Sciences informatiques, une description détaillée de notre projet multidisciplinaire. Le but, les caractéristiques, l'interface du \index{système}système ainsi que les contraintes auxquelles le programme est soumis sont expliquées. Ce présent rapport est destiné aussi bien au client qu'au développeur soucieux de comprendre l'architecture du programme.
+\section{Cadre du projet}
+\noindent Ce programme, nommé \emph{Wizard Poker} est un jeux de cartes fantastiques dans lequel des joueurs s'affrontent dans des duel\index{duel}s un contre un. Ces joueurs portent le nom de \emph{player}. Chaque player possède une \index{collection}collection de cartes à jouer lui permettant de former des paquets appelés \emph{decks}\index{deck}. Lors de la création d'un nouveau player dans le \index{système}système, il reçoit un certain de nombre de cartes lui permettant de créer son premier \index{deck}deck. Il gagnera des cartes supplémentaires en récompense de duel\index{duel}s victorieux.\\
+Il existe deux types de cartes. Le premier type est composé de créatures appelées \emph{minion}, carte ayant un coût en énergie, une valeur d'attaque et un montant de points de vie. Le deuxième type est constitué de sorts appelés \emph{spell}\index{spell}, cartes ayant un coût en énergie et un effet spécial.\\
+Chaque deck\index{deck} est composé de 20 cartes sans restrictions sur la proportion de créatures et de spell\index{spell}. Le player peut mettre deux fois maximum la même carte dans un deck\index{deck} mais il faut qu'il possède alors deux exemplaires de la carte dans sa \index{collection}collection\\
+Le déroulement d'un duel\index{duel} s'effectue comme suit. Les deux players choisissent un deck\index{deck} avec lequel ils veulent jouer avant le début du duel\index{duel}. Ensuite, chacun d'eux commence la partie avec un total de 20 points de vie et 5 cartes en main. Un des deux players choisi aléatoirement joue le premier tour. À chaque début de tour, le player pioche une carte et gagne un point d'énergie supplémentaire, avec un maximum de 10. Il commence à 1 point d'énergie au premier tour. Durant son tour, le player peut attaquer avec ses minions et jouer des cartes de sa main en dépensant un montant d'énergie égal au coût de la carte. Si la carte jouée est un minion, elle est placée sur le plateau de jeu. Si la carte jouée est un spell\index{spell}, son effet spécial est réalisé et la carte défaussée. Quand il le désire, le player peut mettre fin à son tour. Il perd alors les points d'énergie qui lui reste et le tour de son adversaire. Les tours des deux players sont donc asynchrones. Le player dont le total de points de vie est réduit à 0 perd la partie. Si un player n'a plus de cartes à piocher dans son deck\index{deck}, il perd 5 points de vie à chaque début de tour.\\
+Les minions présents sur le plateau peuvent être utilisées un tour après leur mise en jeu. Si un minion attaque le player adverse, les points de vie de ce dernier sont réduits d'un montant égal à la valeur d'attaque du minion. Si un minion attaque un minion adverse, les points de vie de chacune des deux sont réduits de la valeur d'attaque de l'autre. Quand un minion meurt, elle est défaussée.\\
+Le jeu permet à tout utilisateur de créer un \index{account}account associé à un pseudonyme, gérer une liste d'amis afin de pouvoir discuter avec ceux-ci et consulter un \index{classement}classement de tous les players . Il permet également de consulter sa \index{collection}collection de cartes, créer des \index{deck}decks à partir de cette \index{collection}collection et enfin lancer une partie.\\\\
+\section{Glossaire}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Mot} & \textbf{Définition} \\
+\hline
+duel\index{duel} & Combat singulier entres 2 adversaires \\
+\hline
+Game & duel\index{duel} lancé entre 2 joueurs \\
+\hline
+Player & Joueur lors d'un duel\index{duel} \\
+\hline
+Deck\index{deck} & Les cartes choisi par le joueur pour le duel\index{duel} \\
+\hline
+\index{collection}Collection & Toutes les cartes accessibles d'un joueur \\
+\hline
+Spell\index{spell} & Une carte de type sortilège \\
+\hline
+Minion & Une carte de type créature \\
+\hline
+Guest & Un invité n'ayant pas d'\index{account}account associé au jeu \\
+\hline
+Ranking & Le \index{classement}classement des joueurs \\
+\hline
+Matchmaking & La mise en relation des joueurs pour le duel\index{duel} \\
+\hline
+Chat & \index{système}système de conversations entre joueurs \\
+\hline
+Health Points (hp) & Points de vie \\
+\hline
+Energy & Point d'énergie \\
+\hline
+Character & Une cible potentielle \\
+\hline
+Graveyard & Cimetière pour créature \\
+\hline
+Contre-attaque & Offensive lancée en réponse à une attaque \\
+\hline
+Database & Zone de stockage \\
+\hline
+IA & Intelligence artificielle \\
+\hline
+ActionManager & \index{système}système gérant les interactions lors d'une partie \\
+\hline
+
+
+
+\end{tabular}
+\section{Historique du document}
+\begin{tabular}{|l|l|l|l|}
+\hline \textbf{Date} &  \textbf{Version} & \textbf{Auteurs} & \textbf{Comment} \\
+\hline
+16/12/15 & 1.0 & groupe 8 & -- \\
+\hline
+\end{tabular}
+\section{Vue d'ensemble}
+\noindent {Cette section décrit les différentes parties du document. La première, reprend les services que le \index{système}système doit fournir à l'utilisateur ainsi que les contraintes de fonctionnement du \index{système}système. Ceci est réalisé notamment grâce à des diagrammes use case. la deuxième partie, quant à elle, décrit en détail les fonctionnalités du \index{système}système. Des diagrammes use case ainsi que des diagrammes UML sont utilisés.}

@@ -1,0 +1,4 @@
+MainMenu {background: url(:/img/img/menuBg.png) fixed}
+QDialog {background: url(:/img/img/menuBg.png)}
+QMainWindow {background: url(:/img/img/menuBg.png)}
+DuelWindow {background: url(:/img/img/inGameBg.png)}
